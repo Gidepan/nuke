@@ -3,46 +3,75 @@ import 'package:flutter/material.dart';
 
 void main(){
   runApp(MyApp());
-  
-   
-}
-
-void crap(){
-  print('Helo glad you could make it');
-}
-
-void shithead(String name, int age){
-  print("Hello," +name );
-}
-
-List numbers = [1,2,3,4,5];
-
-Map user = {
-  'name': "Gidepan",
-  'age': 20,
-  'gender': "Male",
-};
-
-void seasonslist(){
-  for(int i=0;i<numbers.length;i++){
-    print(numbers[i]);
-  }
+     
 }
 
 class MyApp extends StatelessWidget{
   const MyApp({super.key});
-@override  
+
+  @override
   Widget build(BuildContext context){
-    crap();
-    shithead("Pan", 56);
-    seasonslist();
-    print(user['name']);
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(),
-      
-    );
-  }
+  return MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Scaffold(
+      backgroundColor: Colors.deepPurple[200],
+      appBar: AppBar(
+        title: Center(
+          child: Text(
+            "Ballocks",
+            style: TextStyle(
+              color:Colors.white,
+            ),
+            ),
+        ),
+        backgroundColor: Colors.deepPurple,
+        elevation: 0,
+        leading:Icon(
+          Icons.menu,
+          color: Colors.white,
+          size: 30,
+        ),
+
+        actions: [
+          IconButton(
+            onPressed:() {},
+            icon: Icon(
+              Icons.logout,
+              color: Colors.white,
+              size: 30,
+            ),
+          ),
+        ],
+
+      ),
+      body: Center(
+        child: Container(
+          height: 300,
+          width: 300,
+          decoration: BoxDecoration(
+            color: Colors.deepPurple,
+            borderRadius: BorderRadius.circular(50),
+          ),
+
+          padding: EdgeInsets.all(25),
+          // child: Text(
+          //   "Miss KeOS",
+          //   style: TextStyle(
+          //     color: Colors.white,
+          //     fontSize:20,
+          //     fontWeight: FontWeight.bold,
+          //   ),
+          // ),
+           child: Icon(
+            Icons.home,
+            color: Colors.white,
+            size: 30,
+          ),
+        ),      
+      ),
+    ), 
+   );
+}
 }
 
 
